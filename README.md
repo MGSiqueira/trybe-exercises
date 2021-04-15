@@ -1,1 +1,1 @@
-Repositório para acompanhar o curna Trybe.
+Repositório para acompanhar o curso Trybe.
