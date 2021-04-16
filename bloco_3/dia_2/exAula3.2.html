@@ -4,26 +4,47 @@
         <meta chartset='UTF-8'>
         <title>CSS básico</title>
         <style>
+            body {
+                font-size: 16px;
+                text-align: center;
+                text-decoration: wavy;
+            }
             h1 {
                 font-size: 65px;
                 color: rgb(255,165,0);
+                font-family: sans-serif;
             }
             ul {
                 background-color: rgb(170,0,255);
+                font-style: italic;
+                line-height: 50px;
+                text-align: right;
             }
             .fundão {
+                background-color: rgb(120, 90, 190);
+            }
+            p {
+                font-weight: 600;
+                font-size: 3em
+            }
+            #amarelo {
                 background-color: rgb(255,255,0);
             }
-
+            #vermelho {
+                background-color: rgb(255,0,0);
+            }
+            #marrom {
+                background-color: rgb(75,42,0);
+            }
         </style>
     </head>
     <body>
         <h1 class="fundão">Exercícios 3.2</h1>
         <p>Qual a sua cor favorita?</p>
         <ul class='fundão'>
-            <li>Amarelo</li>
-            <li>Vermelho</li>
-            <li>Marrom</li>
+            <li id="amarelo">Amarelo</li>
+            <li id="vermelho">Vermelho</li>
+            <li id='marrom'>Marrom</li>
         </ul>
     </body>
 </html>
