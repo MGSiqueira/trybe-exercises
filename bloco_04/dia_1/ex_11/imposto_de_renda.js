@@ -1,4 +1,4 @@
-let salarioBruto = 1900;
+let salarioBruto = 3000;
 let valorValido = salarioBruto >= 0;
 let salarioBase;
 let salarioLiquido;
@@ -23,7 +23,7 @@ if (valorValido) {
     } else {
         salarioLiquido = salarioBase - salarioBase * 0.275 + 869.36;
     }
-    console.log(salarioLiquido);
+    console.log(`O salário liquido é de R$${salarioLiquido}`);
 } else {
     console.log('Valor inválido');
 }
