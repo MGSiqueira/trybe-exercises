@@ -1,4 +1,4 @@
-//let array = [2, 3, 2, 5, 8, 2, 3];
+let array = [2, 3, 2, 5, 8, 2, 3];
 
 function maisRepete(lista) {
     let repeteMais = [];
@@ -15,14 +15,14 @@ function maisRepete(lista) {
             qtde = cont;
         } else if (qtde < cont) {
             qtde = cont;
-            repeteMais = lista[numero];
+            repeteMais.push(lista[numero]);
         } else if (qtde === cont) {
             repeteMais.push(lista[numero]);
         };
     };
     return [repeteMais, qtde];
 };
-resultado = maisRepete([1,1,1,2,2,2,3,3])
-//resultado = repeteMais(array);
+let resultado = maisRepete([1,1,1,2,2,2,3,3])
+//let resultado = maisRepete(array);
 console.log(`O ${resultado[0]} é o número que mais repete: ${resultado[1]} vezes.`)
 console.log(maisRepete([1,1,1,2,2,2,3,3]))
