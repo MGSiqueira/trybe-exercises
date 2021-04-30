@@ -1,21 +1,26 @@
-
-document.getElementsByTagName('p')[0].innerText = 'O jeito como me vejo daqui dois anos não é muito diferente do jeito que me vejo agora, para falar a verdade se não ocorrer nenhum acidente muito grave ou algum outro tipo de evento indesperado, o jeito como eu me vejo agora é exatamente igual ao jeito que me vajo daqui a dois anos... Com os olhos.';
-
-
-document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76, 164, 109)';
-
-
-document.getElementsByClassName('center-content')[0].style.backgroundColor = 'rgb(255, 255, 255)';
-
-document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
-
-let paragrafo = document.getElementsByTagName('p');
-for (let i = 0; i < paragrafo.length; i += 1) {
+function alteraTexto(elemento, texto) {
+  document.getElementsByTagName(elemento)[0].innerText = texto;
+}
+function mudaCor(elemento, cor) {
+  document.querySelectorAll(elemento)[0].style.backgroundColor = cor
+}
+function uppercasePrph() {
+  let paragrafo = document.getElementsByTagName('p');
+  for (let i = 0; i < paragrafo.length; i += 1) {
     paragrafo[i].style.textTransform = 'uppercase';
     console.log(paragrafo[i]);
+  }
 }
-    
-
+function printP() {
+  let paragrafos = document.getElementsByTagName('p');
+  return paragrafos;
+}
+alteraTexto('p', 'O jeito como me vejo daqui dois anos não é muito diferente do jeito que me vejo agora, para falar a verdade se não ocorrer nenhum acidente muito grave ou algum outro tipo de evento indesperado, o jeito como eu me vejo agora é exatamente igual ao jeito que me vajo daqui a dois anos... Com os olhos.');
+mudaCor('.main-content', 'rgb(76, 164, 109)');
+mudaCor('.center-content', 'rgb(255, 255, 255)');
+alteraTexto('h1', 'Exercício 5.1 - JavaScript');
+uppercasePrph();
+console.log(printP);
       /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
