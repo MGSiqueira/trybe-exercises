@@ -13,14 +13,18 @@ function uppercasePrph() {
 }
 function printP() {
   let paragrafos = document.getElementsByTagName('p');
-  return paragrafos;
+  let array = [];
+  for (let i = 0; i < paragrafos.length; i++) {
+    array.push(paragrafos[i].innerText);
+  }
+  return array;
 }
 alteraTexto('p', 'O jeito como me vejo daqui dois anos não é muito diferente do jeito que me vejo agora, para falar a verdade se não ocorrer nenhum acidente muito grave ou algum outro tipo de evento indesperado, o jeito como eu me vejo agora é exatamente igual ao jeito que me vajo daqui a dois anos... Com os olhos.');
 mudaCor('.main-content', 'rgb(76, 164, 109)');
 mudaCor('.center-content', 'rgb(255, 255, 255)');
 alteraTexto('h1', 'Exercício 5.1 - JavaScript');
 uppercasePrph();
-console.log(printP);
+console.log(printP());
       /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
