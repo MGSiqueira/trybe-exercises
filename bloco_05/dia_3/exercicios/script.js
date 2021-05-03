@@ -38,3 +38,12 @@ function addClassDays() {
   }
 }
 addClassDays();
+//Ex2. Cria bUtão;
+function criaButao(string){
+  const divButao = document.querySelector('.buttons-container');
+  const butao = document.createElement('button');
+  butao.innerHTML = string;
+  butao.id = 'btn-holiday';
+  divButao.appendChild(butao);
+}
+criaButao('Feriados');
