@@ -47,3 +47,22 @@ function criaButao(string){
   divButao.appendChild(butao);
 }
 criaButao('Feriados');
+//Ex3. Faz o botão mudar as cores dos dias de feriado;
+const butao = document.querySelector('#btn-holiday');
+let clicado = false;
+butao.addEventListener('click', () => {
+  let days = document.getElementsByClassName('day');
+  if ( clicado === false) {
+    for (let i = 0; i < days.length; i++) {
+      if (days[i].classList.contains('holiday')) {
+        days[i].style.backgroundColor = 'grey';
+      }
+    }
+    clicado = true;
+  } else {
+    for (let i = 0; i < days.length; i++) {
+    days[i].style.backgroundColor = 'rgb(238, 238, 238)'
+    }
+    clicado = false;
+  }
+});
