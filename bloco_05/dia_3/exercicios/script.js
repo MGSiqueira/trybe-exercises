@@ -61,8 +61,19 @@ butao.addEventListener('click', () => {
     clicado = true;
   } else {
     for (let i = 0; i < days.length; i++) {
-    days[i].style.backgroundColor = 'rgb(238, 238, 238)'
+      if(days[i].style.backgroundColor === 'grey'){
+        days[i].style.backgroundColor = 'rgb(238, 238, 238)'
+      }
     }
     clicado = false;
   }
 });
+//Ex4. 
+function criaButao2(string) {
+  const divButao = document.querySelector('.buttons-container');
+  const butao = document.createElement('button');
+  butao.innerHTML = string;
+  butao.id = 'btn-friday';
+  divButao.appendChild(butao);
+}
+criaButao2('Sexta-feira');
