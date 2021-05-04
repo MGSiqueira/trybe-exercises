@@ -132,15 +132,30 @@ function taskColor(cor) {
   divMytasks.appendChild(divTask);
 }
 taskColor('green');
-//Ex9. 
+//Ex9. Adiciona a função de task selected;
 function addSelected () {
   const task = document.querySelector('.task');
   task.addEventListener('click', function () {
     if (task.className === 'task'){
       task.classList.add('selected');
-    } else {
-      task.className = 'task';
-    }
+    } else { task.className = 'task' }
   });
 }
 addSelected();
+//Ex10. Faz o que o 10 pede;
+function dayColor() {
+  const selectedTask = document.getElementsByClassName('task selected');
+  const days = document.getElementById('days');
+  const taskDiv = document.querySelector('.task');
+  const taskColor = taskDiv.style.backgroundColor;
+  days.addEventListener('click', function (event) {
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119, 119, 119';
+    }
+  });
+}
+dayColor();
