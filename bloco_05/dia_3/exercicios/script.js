@@ -55,20 +55,20 @@ butao.addEventListener('click', () => {
   if ( clicado === false) {
     for (let i = 0; i < days.length; i++) {
       if (days[i].classList.contains('holiday')) {
-        days[i].style.backgroundColor = 'grey';
+        days[i].style.backgroundColor = 'white';
       }
     }
     clicado = true;
   } else {
     for (let i = 0; i < days.length; i++) {
-      if(days[i].style.backgroundColor === 'grey'){
+      if(days[i].style.backgroundColor === 'white'){
         days[i].style.backgroundColor = 'rgb(238, 238, 238)'
       }
     }
     clicado = false;
   }
 });
-//Ex4. 
+//Ex4. Cria bUtão 2;
 function criaButao2(string) {
   const divButao = document.querySelector('.buttons-container');
   const butao = document.createElement('button');
@@ -77,3 +77,70 @@ function criaButao2(string) {
   divButao.appendChild(butao);
 }
 criaButao2('Sexta-feira');
+//Ex5. Faz o bUtão mudar sextas-feiras para SEXTOU;
+const butao2 = document.querySelector('#btn-friday');
+let clicado2 = false;
+butao2.addEventListener('click', function () {
+  let days = document.getElementsByClassName('day');
+  if (clicado2 === false) {
+    for (let i = 0; i < days.length; i++) {
+      if (days[i].classList.contains('friday')) {
+        days[i].innerHTML = 'SEXTOU';
+      }
+    }
+    clicado2 = true;
+  } else {
+    for (let i = 0; i < days.length; i++) {
+      if (days[i].innerHTML === 'SEXTOU') {
+        days[i].innerHTML = parseInt(days[i-1].innerHTML) + 1;
+      }
+    }
+    clicado2 = false;
+  }
+});
+//Ex6. "Zoom In" e "Zoom out" nos dias dos mês;
+function zoomOver () {
+  const days = document.getElementById('days');
+  days.addEventListener('mouseover', function (event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  });
+}
+zoomOver();
+function zoomOut () {
+  const days = document.getElementById('days');
+  days.addEventListener('mouseout', function (event) {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  });
+}
+zoomOut();
+//Ex7. Cria e adiciona uma tarefa personalizada no calendário;
+function span(string) {
+  const div = document.querySelector('.my-tasks');
+  const span = document.createElement('span');
+  span.innerHTML = string;
+  div.appendChild(span);
+}
+span('Fazer maldade');
+//Ex8. Adiciona cor em frente a tarefa personalizada;
+function taskColor(cor) {
+  const divMytasks = document.querySelector('.my-tasks');
+  const divTask = document.createElement('div');
+  divTask.style.backgroundColor = cor;
+  divTask.className = 'task'
+  divMytasks.appendChild(divTask);
+}
+taskColor('green');
+//Ex9. 
+function addSelected () {
+  const task = document.querySelector('.task');
+  task.addEventListener('click', function () {
+    if (task.className === 'task'){
+      task.classList.add('selected');
+    } else {
+      task.className = 'task';
+    }
+  });
+}
+addSelected();
