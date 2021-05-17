@@ -4,3 +4,53 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body {
+  margin: 2%;
+  background-color: rgb(250, 250, 250);
+}
+
+.container header{
+  background-color: white;
+  margin: 0;
+}
+
+.aside-one ul {
+  list-style: none;
+  padding-left: 5%;
+}
+
+h1, h2 {
+  font-size: 20px;
+}
+
+p, ul {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.main-content {
+  margin: 2.5%;
+}
+
+@media screen and (min-width: 768px) {
+  h1, h2 {
+    font-size: 30px;
+    margin: 5px auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .main-plus {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .aside-div {
+    flex: 0 0 300px;
+  }
+  
+  .main-content {
+    flex: 1 1;
+  }
+}
