@@ -55,6 +55,7 @@
   padding: 20px 0;
   margin: 0 0 0 4%;
   display: inline;
+  text-align: justify;
 }
 
 #content h2 {
@@ -79,4 +80,46 @@
   text-align: right;
   padding: 20px;
   height: 1%;
+}
+
+@media print {
+  #header, #navigation, #footer {
+    display: none;
+  }
+  #aside {
+    float: unset;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+  }
+
+  #aside {
+    display: none;
+  }
+  #content-container, #content {
+    margin-left: 5%;
+    float: none;
+    width: 95%;
+  }
+
+  #content p {
+    width: 95%;
+  }
+
+  #content img {
+    width: 75%;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+  }
+  
+  #navigation {
+    margin-top: 77px;
+  }
 }
