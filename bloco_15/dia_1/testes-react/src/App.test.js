@@ -44,6 +44,4 @@ describe('Verificando coisas', () => {
     expect(inputEmail).toHaveValue('');
     expect(textEmail).toHaveTextContent(`Valor: ${EMAIL_USER}`);
   });
-  
-  
 })
