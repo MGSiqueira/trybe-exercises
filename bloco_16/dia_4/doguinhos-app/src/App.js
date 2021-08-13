@@ -22,7 +22,8 @@ function App({ isFetching, src, fetchDog }) {
 
 const mapStateToProps = (state) => ({
   src: state.imagePath,
-  isFetching: state.isFetching});
+  isFetching: state.isFetching
+});
 
 const mapDispatchToProps = (dispatch) => ({
   fetchDog: () => dispatch(fetchDog())});
