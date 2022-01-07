@@ -1,0 +1,3 @@
+const getCep = (req, res) => {
+  
+}
