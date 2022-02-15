@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.buttons {
+  display: flex;
+  flex-grow: 1;
+}
+
+.color {
+  background-color: green;
+}
