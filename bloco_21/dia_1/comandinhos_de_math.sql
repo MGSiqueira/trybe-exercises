@@ -1,0 +1,52 @@
+-- Testando comandos
+SELECT 5 + 5;
+SELECT 5 - 5;
+SELECT 5 * 5;
+SELECT 5 / 5;
+
+SELECT rental_duration + rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration - rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration / rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration * rental_rate FROM sakila.film LIMIT 10;
+
+
+SELECT 10 DIV 3;
+SELECT 10 DIV 2;
+SELECT 14 DIV 3;
+SELECT 13 DIV 2;
+
+
+SELECT 10 MOD 3;
+SELECT 10 MOD 2;
+SELECT 14 MOD 3;
+SELECT 13 MOD 2;
+SELECT 10.5 MOD 2;
+
+-- Desafios com DIV e MOD
+SELECT IF(15 MOD 2, 'Odd', 'Even') AS 'Even or Odd';
+SELECT 220 DIV 12;
+SELECT 220 MOD 12;
+
+-- Mais comandos
+SELECT ROUND(10.4925);
+SELECT ROUND(10.5136);
+SELECT ROUND(-10.5136);
+SELECT ROUND(10.4925, 2);
+SELECT ROUND(10.4925, 3);
+
+SELECT CEIL(10.51);
+SELECT CEIL(10.49);
+SELECT CEIL(10.2);
+
+SELECT FLOOR(10.51);
+SELECT FLOOR(10.49);
+SELECT FLOOR(10.2);
+
+SELECT POW(2, 2);
+SELECT POW(2, 4);
+
+SELECT SQRT(9);
+SELECT SQRT(16);
+
+SELECT RAND();
+SELECT ROUND(7 + (RAND() * 6));
